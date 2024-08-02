@@ -1,0 +1,223 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.container {
+  @include flex-container(row, center, center);
+  height: auto;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  max-width: 1152px;
+  width: 100%;
+  @include flex-container(row, space-between, center);
+}
+
+.skeleton {
+  position: relative;
+  width: 270px;
+  height: 388px;
+  background-color: $main-background;
+  background: linear-gradient(45deg, $main-background, #e6e6e6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 18px 28px 34px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  
+  justify-content: space-between;
+  .top {
+    width: 30%;
+    height: 28px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    animation: shimmer 1.5s infinite;
+    border-radius: 15px;
+  }
+  .bottom {
+    border-radius: 15px;
+    width: 100%;
+    height: 47px;
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    animation: shimmer 1.5s infinite;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  } 
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.card {
+  position: relative;
+  width: 270px;
+  height: 388px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-bottom: 2px solid $main-green;
+  z-index: 100;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  &:hover img,
+  &.active img {
+    filter: grayscale(0%);
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 18px 28px;
+}
+
+.overlay-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 34px 28px;
+}
+
+.overlay h2 {
+  font-family: Nohemi;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 37px;
+  text-align: left;
+  margin: 0px;
+  color: $main-background;
+}
+
+.overlay-2 p {
+  font-family: Nohemi;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  color: $main-background;
+  margin: 0px;
+}
+
+@media screen and (max-width: 1230px) {
+  .content {
+    width: 91%;
+  }
+  .card,
+  .skeleton {
+    width: 235px;
+    height: 345px;
+  }
+  .overlay {
+    margin: 16px 26px;
+  }
+  .overlay-2 {
+    margin: 32px 26px;
+  }
+  .overlay h2 {
+    font-size: 37px;
+  }
+  .overlay-2 p {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .card,
+  .skeleton {
+    width: 225px;
+    height: 320px;
+  }
+  .overlay {
+    margin: 14px 24px;
+  }
+  .overlay-2 {
+    margin: 30px 24px;
+  }
+  .overlay h2 {
+    font-size: 33px;
+  }
+  .overlay-2 p {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .card,
+  .skeleton {
+    width: 210px;
+    height: 310px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .content {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .card,
+  .skeleton {
+    width: calc(50% - 20px);
+  }
+  .overlay,
+  .overlay-2 {
+    margin: 23px 34px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content {
+    gap: 23px;
+  }
+  .card,
+  .skeleton {
+    width: calc(100%);
+  }
+  .overlay h2 {
+    font-size: 32px;
+  }
+  .overlay-2 p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card,
+  .skeleton {
+    width: calc(100%);
+    width: 620px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card,
+  .skeleton {
+    width: calc(100%);
+    width: 550px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card,
+  .skeleton {
+    width: calc(100%);
+    width: 450px;
+    height: 215px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card,
+  .skeleton {
+    width: calc(100%);
+    width: 328px;
+    height: 204px;
+  }
+}

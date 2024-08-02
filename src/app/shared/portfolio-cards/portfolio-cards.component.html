@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="content">
+    <ng-container *ngFor="let card of cards">
+      <div
+        class="card"
+        (click)="onImage(card.image, card.num); Filter(card)"
+        [ngClass]="{ active: activeCard === card }"
+        *ngIf="!isLoading"
+      >
+        <img [src]="card.image" alt="{{ card.title }}" />
+        <div class="overlay">
+          <h2>{{ card.num }}</h2>
+        </div>
+        <div class="overlay-2">
+          <p>{{ card.title }}</p>
+        </div>
+      </div>
+      <div class="skeleton" *ngIf="isLoading">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>

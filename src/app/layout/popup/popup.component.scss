@@ -1,0 +1,250 @@
+@import "../../../styles/variables";
+.message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  app-message-mini {
+    width: 368px;
+    height: 442px;
+  }
+}
+.free-estimate-button {
+  width: 74px;
+  height: 74px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: $main-green;
+  position: fixed;
+  z-index: 777;
+  top: 213px;
+  box-shadow: 0px 5px 12px 0px rgba(12, 38, 39, 0.3);
+  cursor: pointer;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2px;
+    span {
+      text-align: center;
+      font-family: Nohemi;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 700;
+    }
+    .white {
+      color: #fff;
+      font-size: 10.009px;
+      line-height: 9.384px;
+    }
+    .large {
+      color: #fed08e;
+      font-size: 22.846px;
+      line-height: 21.418px;
+      position: relative;
+      top: 1px;
+    }
+    .regular {
+      color: #fed08e;
+      font-size: 10.904px;
+      line-height: 10.385px;
+    }
+  }
+}
+
+::ng-deep .center-aligned-modal {
+  .ant-modal {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    padding: 0px;
+    max-width: 328px;
+    .ant-modal-close-x {
+      color: white;
+    }
+    .ant-modal-body {
+      background: $main-green;
+      padding: 44px 21px;
+      .popup-header {
+        h1 {
+          color: #f4f9f9;
+          font-family: Nohemi;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 26px; /* 108.333% */
+          text-transform: uppercase;
+          span {
+            color: #ffd18f;
+            font-family: Nohemi;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+          }
+        }
+        p {
+          color: #fff;
+          font-family: Nohemi;
+          font-size: 14px;
+          font-style: normal;
+          margin-bottom: 39px;
+          font-weight: 400;
+          line-height: 18px; /* 128.571% */
+        }
+      }
+    }
+    form {
+      .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        input {
+          padding-left: 2px;
+        }
+        input,
+        select {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          padding-bottom: 8px;
+          border-bottom: 2px solid #fff;
+          color: #fff;
+          font-family: Nohemi;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          &::placeholder {
+            color: #fff;
+          }
+          option {
+            color: black;
+            padding: 5px;
+          }
+        }
+      }
+      .checkbox-wrapper {
+        margin-top: 17px;
+        margin-bottom: 38px;
+        p {
+          color: #fff;
+          font-family: Nohemi;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.5;
+          margin: 0px;
+        }
+        .checkbox-container {
+          margin-top: 5px;
+          display: flex;
+          gap: 5px;
+          .input-container {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+            .checkbox {
+              background-color: transparent;
+              border: 1px solid #fff;
+              width: 8.913px;
+              height: 10px;
+              flex-shrink: 0;
+              &.checked {
+                background-color: #fff;
+              }
+            }
+            span {
+              color: #fff;
+              font-family: Nohemi;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+              position: relative;
+              top: 1.5px;
+            }
+          }
+        }
+      }
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          position: relative;
+          padding: 0px;
+          padding-right: 10.41px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 234.413px;
+          height: 46px;
+          flex-shrink: 0;
+          background-color: #fff;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            background: linear-gradient(178deg, #fed08e 1.44%, #ba8751 98.62%);
+          }
+          span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #0c2627;
+            font-family: Nohemi;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+          .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $main-green;
+            width: 29px;
+            height: 29px;
+            flex-shrink: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  ::ng-deep .center-aligned-modal {
+    .ant-modal {
+      max-width: 95%;
+    }
+  }
+}
+
+@media screen and (max-width: 280px) {
+  ::ng-deep .center-aligned-modal {
+    .ant-modal {
+      form {
+        .btn-container {
+          button {
+            width: 200px;
+            span{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

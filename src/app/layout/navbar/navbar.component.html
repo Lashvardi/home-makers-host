@@ -1,0 +1,108 @@
+<nav [ngClass]="{ appear: isScrollingUp, dissapear: isScrollingDown }">
+  <div class="container">
+    <div class="logo" (click)="scrollToTop()">
+      <a routerLink="">
+        <img src="../../../assets/img/shared-imgs/logo.png" alt="" />
+      </a>
+    </div>
+    <div class="navbar-container">
+      <ul class="navbar">
+        <li class="navbar-li">
+          <a
+            routerLinkActive="active"
+            routerLink=""
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="scrollToTop()"
+            >Home</a
+          >
+        </li>
+        <li class="navbar-li services">
+          <a
+            (click)="scrollToTop()"
+            routerLink="/services"
+            routerLinkActive="active"
+            >Services</a
+          >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+          >
+            <path d="M1 1L4.5 4L8 1" stroke="white" stroke-width="1.5" />
+          </svg>
+          <div class="dropdown">
+            <ul class="dropdown-ul">
+              <li class="top">
+                <a routerLink="/services/apartment-renovation"
+                  >Apartment Renovation</a
+                >
+              </li>
+              <li class="middle">
+                <a routerLink="/services/bathroom-renovation"
+                  >Bathroom Renovation</a
+                >
+              </li>
+              <li class="middle">
+                <a routerLink="/services/commercial-renovation"
+                  >Commercial Renovation</a
+                >
+              </li>
+              <li class="bottom">
+                <a routerLink="/services/kitchen-renovation"
+                  >Kitchen Renovation</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="navbar-li">
+          <a
+            routerLinkActive="active"
+            routerLink="/about-us"
+            (click)="scrollToTop()"
+            >About us</a
+          >
+        </li>
+        <li class="navbar-li">
+          <a
+            routerLinkActive="active"
+            routerLink="/portfolio/01"
+            (click)="scrollToTop()"
+            >Portfolio</a
+          >
+        </li>
+        <li class="navbar-li">
+          <a
+            routerLinkActive="active"
+            routerLink="/contact-us"
+            (click)="scrollToTop()"
+            >Contact us</a
+          >
+        </li>
+      </ul>
+      <a href="tel:+(646)724-3326" class="phone">(646)724-3326</a>
+    </div>
+    <div class="hamburger-menu">
+      <div (click)="sidebarVisible = true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="18"
+          viewBox="0 0 24 18"
+          fill="none"
+        >
+          <path
+            d="M0 0V2H24V0H0ZM0 8V10H24V8H0ZM0 16V18H24V16H0Z"
+            fill="#F3F1F5"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<p-sidebar [(visible)]="sidebarVisible" position="right">
+  <app-sidebar (CloseSidebar)="closeSideBar()"></app-sidebar>
+</p-sidebar>

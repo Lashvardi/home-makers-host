@@ -1,0 +1,123 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+header {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 2px solid $main-green;
+  .container {
+    width: 1152px;
+    height: 226px;
+    position: relative;
+    .title-container {
+      position: relative;
+      z-index: 10;
+      margin-top: 54px;
+      .title {
+        color: $main-green;
+        font-family: Nohemi;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 37px; /* 92.5% */
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .title-mobile {
+        color: $main-green;
+        font-family: Nohemi;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        display: none;
+      }
+      .subtitle {
+        color: $main-green;
+        font-family: Nohemi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  header {
+    .container {
+      width: 91%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    .container {
+      height: 144px;
+      .title-container {
+        margin-top: 39px;
+        display: flex;
+        flex-direction: column-reverse;
+        .title {
+          display: none;
+        }
+        .title-mobile {
+          display: block;
+          font-size: 28px;
+          line-height: 28px;
+          text-align: center;
+        }
+        .subtitle {
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+      img {
+        top: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+@media screen and (max-width: 361px) {
+  header {
+    .container {
+      .title-container {
+        margin-top: 39px;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+        .title-mobile {
+          font-size: 25px;
+          line-height: 100%;
+        }
+        .subtitle {
+          font-size: 14px;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 312px) {
+  header {
+    .container {
+      .title-container {
+        .title-mobile {
+          font-size: 22px;
+        }
+        .subtitle {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

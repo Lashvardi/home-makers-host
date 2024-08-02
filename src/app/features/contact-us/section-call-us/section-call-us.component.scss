@@ -1,0 +1,84 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+section {
+  padding: 42px 0 44.5px;
+  .container {
+    width: 1152px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      margin: 0;
+      color: #000;
+      font-family: Nohemi;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 245.066px;
+      height: 63.429px;
+      flex-shrink: 0;
+      background: linear-gradient(178deg, #fed08e 1.44%, #ba8751 98.62%);
+      color: $main-green;
+      font-family: Nohemi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      transition: 0.3s ease all !important;
+      &:hover {
+        background: $main-green;
+        color: $main-background;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  section {
+    .container {
+      width: 91%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    .container {
+      flex-direction: column;
+      gap: 32px;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  section {
+    .container {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  section {
+    .container {
+      a {
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
+@import "../node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+@import "../node_modules/primeng/resources/primeng.css";
+@import './styles/variables';
+
+@font-face {
+  font-family: Nohemi;
+  src: url("../src/assets/fonts/Nohemi-VF.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  padding: 0px;
+  padding-top: 100px;
+  margin: 0px;
+  background-color: $main-background;
+}

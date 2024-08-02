@@ -1,0 +1,122 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/variables";
+
+header {
+  display: flex;
+  justify-content: center;
+  background: $main-background;
+  overflow: hidden;
+  border-bottom: 2px solid $main-green;
+  width: 100%;
+  .container {
+    width: 1152px;
+    height: 226px;
+    position: relative;
+    left: -2px;
+    .title-container {
+      position: relative;
+      z-index: 10;
+      margin-top: 50px;
+      .title {
+        color: $main-green;
+        font-family: Nohemi;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 37px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .title-mobile {
+        color: $main-green;
+        font-family: Nohemi;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        display: none;
+      }
+      .subtitle {
+        color: #0c2627;
+        font-family: Nohemi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  header {
+    .container {
+      width: 91%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    .container {
+      height: 113px;
+      margin-top: 13px;
+      .title-container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        .title {
+          display: none;
+        }
+        .title-mobile {
+          display: block;
+          font-size: 28px;
+          line-height: 28px;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+          font-size: 13px;
+        }
+      }
+      img {
+        width: 220px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 361px) {
+  header {
+    .container {
+      .title-container {
+        margin-top: 39px;
+        .title-mobile {
+          font-size: 25px;
+          line-height: 100%;
+        }
+        .subtitle {
+          font-size: 12px;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  header {
+    .container {
+      .title-container {
+        .title-mobile {
+          font-size: 22px;
+        }
+        .subtitle {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

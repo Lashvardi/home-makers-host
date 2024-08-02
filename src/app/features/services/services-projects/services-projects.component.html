@@ -1,0 +1,45 @@
+<div class="content">
+    <div class="text-content">
+        <app-sup-text-title
+            supTitle="Apartment Renovation"
+            [title]="headingTitle"
+            titleFontSize="36px"
+        ></app-sup-text-title>
+        <div class="list">
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Exceptional Craftsmanship</p>
+            </div>
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Innovative Design Solutions</p>
+            </div>
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Stress-Free Experience</p>
+            </div>
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Transparent Pricing</p>
+            </div>
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Eco-Friendly Practices</p>
+            </div>
+            <div class="list-item">
+                <span class="marker"></span>
+                <p>Timely Project Completion</p>
+            </div>
+        </div>
+
+        <button>
+            <p>See all projects</p>
+        </button>
+    </div>
+
+    <app-services-project-card *ngFor="let project of projects, index as i"
+        [projectImage]="project.projectImage"
+        [projectLocation]="project.projectLocation"
+        [projectIndex]="i"
+    ></app-services-project-card>
+</div>

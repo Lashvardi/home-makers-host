@@ -1,0 +1,49 @@
+@import '../../../../styles/variables';
+
+.project-card {
+    height: 388px;
+    width: 560px;
+    padding: 20px 9.5%;
+    display: flex;
+    align-items: flex-end;
+    background-image: url('https://www.redfin.com/blog/wp-content/uploads/2022/09/spacejoy-xkJ2_THgKmk-unsplash.jpg');
+    background-size: cover;
+    border-top: 2px solid $main-green;
+    border-bottom: 2px solid $main-green;
+
+
+    &.first-project {
+        width: 850px;
+    }
+
+    .project-card-content {
+
+        p, h2 {
+            color: $main-background;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 37px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 18px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .project-card {
+        width: 90vw;
+        margin-bottom: 30px;
+
+        &.first-project {
+            width: 90vw;
+        }
+    }
+}

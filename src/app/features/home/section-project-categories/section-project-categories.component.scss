@@ -1,0 +1,12 @@
+@import "../../../../styles/variables";
+
+section {
+  margin-bottom: 121px;
+  background-color: $main-background;
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    margin-bottom: 20px;
+  }
+}

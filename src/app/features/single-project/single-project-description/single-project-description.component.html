@@ -1,0 +1,75 @@
+<div class="content">
+    <div class="info">
+        <div class="project-gallery section">
+            <h2 class="section-title">Project Gallery</h2>
+
+            <div class="images section-content">
+                <div class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                    <div class="overlay">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                    <div class="overlay">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                    <div class="overlay">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                    <div class="overlay">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/65bb506dcb310754719cf81f/ede935de-1138-4f66-8ed7-44bd16efc709/medium.webp" alt="">
+                    <div class="overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details section">
+            <h2 class="section-title">Project Details</h2>
+            <div class="top-row section-content">
+                <div class="detail">
+                    <div class="detail-content">
+                        <h3 class="detail-title">
+                            <img src="../../../../assets/svg/project-type.svg" alt="">
+                            <p>Project Type</p>
+                        </h3>
+                        <p class="detail-text">Apartment</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="detail-content">
+                        <h3 class="detail-title">
+                            <img src="../../../../assets/svg/brush.svg" alt="">
+                            <p>Style</p>
+                        </h3>
+                        <p class="detail-text">Modern Classic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location detail">
+                <div class="detail-content">
+                    <h3 class="detail-title">
+                        <img src="../../../../assets/svg/map-home-pin.svg" alt="">
+                        <p>Location</p>
+                    </h3>
+                    <p class="detail-text">Financial District</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="consultation">
+        <app-form-mini *ngIf="formType == 'mini'"></app-form-mini>
+        <app-form-large *ngIf="formType == 'large'"></app-form-large>
+    </div>
+
+</div>

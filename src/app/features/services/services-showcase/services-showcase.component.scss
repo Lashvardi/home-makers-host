@@ -1,0 +1,114 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.content {
+    width: 1440px;
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    border-bottom: 2px solid $main-green;
+
+    .image-content {
+        width: 760px;
+        max-width: 100%;
+        
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .text-content {
+        width: calc(100% - 760px);
+        height: 530px;
+        @include flex-center;
+        background-color: $main-gray;
+        padding: 0 10px;
+
+        .info {
+            width: 350px;
+            height: 100%;
+            padding-top: 50px;
+        }
+
+        .description {
+            font-family: Nohemi;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 15px;
+            color: $main-green;
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: 1230px) {
+    .content {
+
+        .image-content {
+            width: 600px;
+            height: 419px;
+        }
+
+        .text-content {
+            height: 419px;
+            width: calc(100% - 600px);
+            
+            .info {
+                height: auto;
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .content {
+
+        .image-content {
+            width: calc(100% - 390px);
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-content {
+            width: 390px;
+
+            .info {
+                height: auto;
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+
+        .image-content {
+            width: 100%;
+            height: auto;
+
+            img {
+                height: unset;
+                object-fit: contain;
+            }
+        }
+
+        .text-content {
+            width: 100%;
+            padding: 20px 0 35px 0;
+            height: auto;
+
+            .info {
+                height: auto;
+                padding-top: 0;
+                width: 90%;
+            }
+        }
+    }
+}

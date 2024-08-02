@@ -1,0 +1,124 @@
+@import "../../../styles/variables";
+.container {
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  nav {
+    padding: 0 16px;
+    position: relative;
+    top: -23px;
+    ul {
+      width: 100%;
+      list-style-type: none;
+      .main-li {
+        padding: 14px 0 14px 19px;
+        border-bottom: 1px solid #fff;
+        a {
+          color: #fff;
+          font-family: Nohemi;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          transition: 0.3s ease all;
+          &:hover {
+            color: $main-gold;
+          }
+
+          &.active {
+            color: $main-gold;
+          }
+        }
+      }
+      .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .close-btn {
+          cursor: pointer;
+          &:hover {
+            svg {
+              rect {
+                fill: $main-gold;
+              }
+            }
+          }
+          svg {
+            rect {
+              transition: 0.3s ease all;
+            }
+          }
+        }
+      }
+      .services-container {
+        padding: 14px 0 14px 19px;
+        border-bottom: 1px solid #fff;
+        max-height: 66px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        &.increaseHeight {
+          max-height: 400px;
+        }
+        .services {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          cursor: pointer;
+          &:hover {
+            span {
+              color: $main-orange;
+            }
+            svg {
+              path {
+                stroke: $main-orange;
+              }
+            }
+          }
+          span {
+            color: #fff;
+            font-family: Nohemi;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: 0.3s ease all;
+          }
+          svg {
+            transition: 0.3s ease all;
+            &.rotate {
+              transform: rotateX(180deg);
+            }
+            path {
+              transition: 0.3s ease all;
+            }
+          }
+        }
+        .services-list-wrapper {
+          margin-top: 10px;
+          .services-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+              a {
+                color: #fff;
+                font-family: Nohemi;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 130% */
+                transition: all 0.3s ease;
+                &:hover {
+                  color: $main-orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

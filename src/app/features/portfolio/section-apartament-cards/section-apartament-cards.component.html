@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="content" [@cardAnimation]="cards">
+    <div class="card" *ngFor="let card of cards">
+      <img routerLink="/project/:projectId" [src]="card.image" [alt]="card.title" />
+      <div class="overlay">
+        <h2>{{ card.num }}</h2>
+        <p>{{ card.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

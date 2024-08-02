@@ -1,0 +1,119 @@
+<div class="form-mini">
+  <div
+    class="form-wrapper"
+    *ngIf="!formSubmitted"
+    [@fadeOutIn]="currentState"
+    [@fadeIn]="'in'"
+  >
+    <div class="popup-header">
+      <h1>Schedule Your Free On-Site <span>Consultation</span></h1>
+      <p>
+        Discover the potential of your space with our expert guidance. Our
+        professional team will assess your needs, provide tailored solutions.
+      </p>
+    </div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="input-wrapper">
+        <div class="input-with-error">
+          <input
+            type="email"
+            placeholder="Your Email"
+            required
+            [(ngModel)]="email"
+            name="email"
+            #emailModel="ngModel"
+          />
+          <div class="error-message">
+            Invalid email. Please check and try again.
+          </div>
+        </div>
+        <div class="input-with-error">
+          <input
+            type="tel"
+            placeholder="Your Phone"
+            required
+            [(ngModel)]="phone"
+            name="phone"
+            #phoneModel="ngModel"
+          />
+          <div class="error-message">
+            Invalid phone number. Please check and try again.
+          </div>
+        </div>
+
+        <div class="input-with-error">
+          <select [(ngModel)]="selectedValue" name="service" required>
+            <option
+              value=""
+              disabled
+              selected
+              hidden
+              class="select-placeholder"
+            >
+              Choose Service
+            </option>
+            <option value="Apartment Renovation">Apartment Renovation</option>
+            <option value="Bathroom Renovation">Bathroom Renovation</option>
+            <option value="Commercial Renovation">Commercial Renovation</option>
+            <option value="Kitchen Renovation">Kitchen Renovation</option>
+          </select>
+          <div class="error-message">Please complete all required fields.</div>
+        </div>
+      </div>
+      <div class="checkbox-wrapper">
+        <div class="input-with-error">
+          <p>Your preferred time to talk</p>
+          <div class="checkbox-container">
+            <div class="input-container" (click)="togglePm()">
+              <div class="checkbox" [ngClass]="{ checked: pm }"></div>
+              <span> PM </span>
+            </div>
+            <div class="input-container" (click)="toggleAm()">
+              <div class="checkbox" [ngClass]="{ checked: am }"></div>
+              <span> AM </span>
+            </div>
+            <div class="input-container" (click)="toggleAsap()">
+              <div class="checkbox" [ngClass]="{ checked: asap }"></div>
+              <span> ASAP </span>
+            </div>
+          </div>
+          <div class="error-message">Please check at least one box.</div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button type="submit">
+          <span>Send Message</span>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="13"
+              viewBox="0 0 14 13"
+              fill="none"
+            >
+              <path
+                d="M12 6.47573L1.37791 6.4773M12 6.47573L8.21218 10.7255M12 6.47573L8.21218 2.22573"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="formSubmitted" [@fadeIn]="'in'" class="message-container">
+    <app-message-mini
+      [title]="formSuccess ? 'SUCCESSFULLY SENT' : 'SOMETHING WENT WRONG!'"
+      [text]="
+        formSuccess
+          ? 'Thank you for reaching out to us! We have successfully received your message. A member of our team will be in touch with you shortly to assist with your inquiry.'
+          : 'We\'re sorry, but something went wrong while processing your request. Please try again later. If the issue persists, feel free to contact us directly for assistance.'
+      "
+      [Padding]="'0px 40px'"
+    >
+    </app-message-mini>
+  </div>
+</div>

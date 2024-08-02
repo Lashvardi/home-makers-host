@@ -1,0 +1,10 @@
+<div class="container">
+  <div
+    class="content"
+    [ngClass]="{
+      success: title === 'SUCCESSFULLY SENT',
+      error: title === 'SOMETHING WENT WRONG!'}">
+    <span class="title">{{title}}</span>
+    <p class="text" >{{ text }}</p>
+  </div>
+</div>

@@ -1,0 +1,222 @@
+@import "../../../styles/variables";
+::ng-deep .p-sidebar {
+  background-color: $main-green;
+  width: 360px;
+  .p-sidebar-header {
+    display: none;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-green;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 999;
+  &.appear {
+    top: 0;
+  }
+  &.dissapear {
+    top: -100px;
+  }
+  .container {
+    max-width: 1152px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .navbar-container {
+      display: flex;
+      gap: 23px;
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 66px;
+        position: relative;
+        z-index: 1000;
+        .navbar-li {
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-family: Nohemi;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: 0.3s ease all;
+
+
+            &.active {
+              color: $main-gold;
+            }
+  
+          }
+
+          &:hover {
+            a {
+              color: $main-gold;
+            }
+            svg {
+              path {
+                stroke: $main-gold;
+              }
+            }
+          }
+        }
+        .services {
+          position: relative;
+          display: flex;
+          align-items: center;
+          svg {
+            position: absolute;
+            left: 70px;
+          }
+          &:hover {
+            .dropdown {
+              display: block;
+            }
+          }
+          .dropdown {
+            position: absolute;
+            display: none;
+            top: 0px;
+            right: -30px;
+            padding-top: 43px;
+            z-index: -100;
+            transition: all 0.3s ease;
+            .dropdown-ul {
+              box-sizing: border-box;
+              width: 261px;
+              height: 180px;
+              flex-shrink: 0;
+              border-radius: 10px;
+              list-style-type: none;
+              background-color: #fff;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              overflow: hidden;
+              li {
+                a {
+                  box-sizing: border-box;
+                }
+              }
+              .top {
+                a {
+                  height: 51px;
+                  padding-top: 11px;
+                }
+              }
+              .bottom {
+                a {
+                  height: 49px;
+                  padding-bottom: 9px;
+                }
+              }
+              li {
+                width: 100%;
+                transition: all 0.3s ease;
+                &:hover {
+                  background: #ebf6f6;
+                }
+                a {
+                  display: flex;
+                  align-items: center;
+                  padding-left: 26px;
+                  width: 100%;
+                  min-height: 40px;
+                  color: $main-green;
+                  font-family: Nohemi;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+      }
+      .phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-decoration: none;
+        left: 37px;
+        width: 170px;
+        height: 44px;
+        flex-shrink: 0;
+        background: linear-gradient(178deg, #fed08e 1.44%, #ba8751 98.62%);
+        color: $main-green;
+        font-family: Nohemi;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: all 0.5s ease !important;
+        &:hover {
+          background: $main-background;
+          color: $main-orange;
+          font-weight: 600;
+        }
+      }
+    }
+    .hamburger-menu {
+      cursor: pointer;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  nav {
+    .container {
+      max-width: 91%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    .container {
+      .navbar-container {
+        gap: 15px;
+        .navbar {
+          gap: 30px;
+        }
+        button {
+          left: 0px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 825px) {
+  nav {
+    .container {
+      .navbar-container {
+        display: none;
+      }
+      .hamburger-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  ::ng-deep .p-sidebar {
+    width: 100%;
+  }
+}

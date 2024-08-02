@@ -1,0 +1,14 @@
+<div class="swiper-container">
+    <nz-carousel #carousel nzAutoPlay nzEffect="scrollx">
+      <div nz-carousel-content *ngFor="let image of images">
+        <img class="slide-photos" [src]="image" alt="">
+      </div>
+    </nz-carousel>
+    <button class="prev-button" (click)="goToPrevious()">
+      <img class="prev-img" src="../../../../assets/svg/single-prev.svg" alt="">
+    </button>
+    <button class="next-button" (click)="goToNext()">
+      <img class="next-img" src="../../../../assets/svg/single-next.svg" alt="">
+    </button>
+  </div>
+  

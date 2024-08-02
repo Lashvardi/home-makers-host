@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="form-wrapper" *ngIf="!formSubmitted" [@fadeOutIn]="currentState" [@fadeIn]="'in'">
+    <div class="popup-header">
+      <h1>Schedule Your Free On-Site <span>Consultation</span></h1>
+      <p class="p-mobile">
+        Discover the potential of your space with our expert guidance. Our professional team will assess your needs, provide tailored solutions.
+      </p>
+      <p class="p-pc">
+        Discover the potential of your space with our expert guidance. Our professional team will assess your needs, provide tailored solutions, and help you visualize your dream remodel—all at no cost. Book your consultation today and take the first step towards transforming your home.
+      </p>
+    </div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <div class="input-wrapper">
+        <input type="email" placeholder="Your Email" required [(ngModel)]="email" name="email" #emailModel="ngModel" />
+        <input type="tel" placeholder="Your Phone" required [(ngModel)]="phone" name="phone" #phoneModel="ngModel" />
+        <select [(ngModel)]="selectedValue" name="service" required>
+          <option value="" disabled selected hidden class="select-placeholder">Choose Service</option>
+          <option value="Apartment Renovation">Apartment Renovation</option>
+          <option value="Bathroom Renovation">Bathroom Renovation</option>
+          <option value="Commercial Renovation">Commercial Renovation</option>
+          <option value="Kitchen Renovation">Kitchen Renovation</option>
+        </select>
+      </div>
+      <div class="checkbox-wrapper">
+        <div class="options">
+          <p>Your preferred time to talk</p>
+          <div class="checkbox-container">
+            <div class="input-container" (click)="togglePm()">
+              <div class="checkbox" [ngClass]="{ checked: pm }"></div>
+              <span> PM </span>
+            </div>
+            <div class="input-container" (click)="toggleAm()">
+              <div class="checkbox" [ngClass]="{ checked: am }"></div>
+              <span> AM </span>
+            </div>
+            <div class="input-container" (click)="toggleAsap()">
+              <div class="checkbox" [ngClass]="{ checked: asap }"></div>
+              <span> ASAP </span>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button type="submit" class="button-pc">
+            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+              <rect width="29" height="29" fill="white" />
+              <path d="M20.75 15.4757L8.83254 15.4773M20.75 15.4757L16.5002 19.7255M20.75 15.4757L16.5002 11.2257" stroke="#0C2627" stroke-width="2" stroke-linecap="square" />
+            </svg>
+          </button>
+          <button type="submit" class="button-mobile">
+            <span>Send Message</span>
+            <div class="arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                <path d="M12 6.47573L1.37791 6.4773M12 6.47573L8.21218 10.7255M12 6.47573L8.21218 2.22573" stroke="white" stroke-width="2" stroke-linecap="square" />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="formSubmitted" [@fadeIn]="'in'"   class="message-container">
+    <app-message
+      [title]="formSuccess ? 'SUCCESSFULLY SENT' : 'SOMETHING WENT WRONG!'"
+      [text]="formSuccess ? 'Thank you for reaching out to us! We have successfully received your message. A member of our team will be in touch with you shortly to assist with your inquiry.' : 'We\'re sorry, but something went wrong while processing your request. Please try again later. If the issue persists, feel free to contact us directly for assistance.'">
+    </app-message>
+  </div>
+</div>

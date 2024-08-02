@@ -1,0 +1,273 @@
+@import "../../../../styles/variables";
+section {
+  border-top: 2px solid $main-green;
+  margin-bottom: 28px;
+  .container {
+    max-width: 1152px;
+    margin: 80px auto 62px;
+    position: relative;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      .half {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .title-mobile {
+        display: none;
+        span {
+          color: $main-orange;
+          font-family: Nohemi;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          height: 10px;
+        }
+        h1 {
+          color: $main-green;
+          font-family: Nohemi;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          height: 28px;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+        }
+      }
+      .description {
+        max-width: 270px;
+        .title-wrapper {
+          font-family: Nohemi;
+          font-style: normal;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          span {
+            color: $main-orange;
+            font-size: 16px;
+            font-weight: 400;
+            height: 16px;
+            position: relative;
+            top: -4px;
+          }
+          h1 {
+            color: $main-green;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 37px; /* 102.778% */
+            text-transform: uppercase;
+            margin-bottom: 40px;
+          }
+        }
+        .details {
+          font-family: Nohemi;
+          font-style: normal;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 34px;
+          .details-list {
+            padding-left: 10px;
+            list-style-position: inside;
+            margin-bottom: 0px;
+            li {
+              color: $main-green;
+              opacity: 0.8;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 27px;
+            }
+          }
+          button {
+            width: 100%;
+            height: 46px;
+            text-align: center;
+            position: relative;
+            background-color: $main-orange;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+              background-color: $main-gold;
+              span {
+                color: $main-green;
+              }
+            }
+            span {
+              font-size: 16px;
+              font-weight: 700;
+              color: #f4f9f9;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transition: all 0.3s ease;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+      .card {
+        width: 270px;
+        height: 387px;
+        flex-shrink: 0;
+        padding: 18px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: Nohemi;
+        font-style: normal;
+        background-position: center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        // დროებით იყოს ეს სურათი სანამ ბექიდან წამოვიღებთ
+        background: url("../../../../assets/img/home-images/renovation.png");
+        position: relative;
+        .filter {
+          width: 100%;
+          height: 100%;
+          opacity: 0.3;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .index {
+          color: $main-background;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 37px; /* 92.5% */
+          text-transform: uppercase;
+          z-index: 100;
+        }
+        .project-type {
+          display: flex;
+          flex-direction: column;
+          z-index: 100;
+          span {
+            color: $main-background;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+          p {
+            color: $main-background;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px; /* 112.5% */
+            text-transform: uppercase;
+            margin: 0 !important;
+          }
+        }
+      }
+      .btn-mobile {
+        display: none;
+        width: 100%;
+        height: 46px;
+        text-align: center;
+        position: relative;
+        background-color: $main-orange;
+        border: none;
+        outline: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: $main-gold;
+          span {
+            color: $main-green;
+          }
+        }
+        span {
+          font-size: 16px;
+          font-weight: 700;
+          color: #f4f9f9;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transition: all 0.3s ease;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .decoration {
+      position: absolute;
+      top: -200px;
+      right: 0;
+      z-index: -1;
+    }
+    .decoration-mobile {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  section {
+    .container {
+      width: 91%;
+      .content {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .half {
+          gap: 20px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    .decoration-mobile {
+      display: block;
+    }
+    .container {
+      margin-top: 18px;
+      margin-bottom: 20px;
+      .content {
+        justify-content: flex-start;
+        .title-mobile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .half {
+          flex-direction: column;
+          align-items: center;
+
+          .description {
+            display: none;
+          }
+          .btn-mobile {
+            display: block;
+          }
+          .card {
+            width: 100%;
+            // max-width: 328px;
+            // height: 333px;
+            padding: 16px 28px;
+          }
+        }
+      }
+      .decoration {
+        display: none;
+      }
+      .decoration-mobile {
+        top: -10px;
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  section {
+    margin-bottom: 0px;
+  }
+}
