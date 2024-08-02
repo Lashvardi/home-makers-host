@@ -13,6 +13,6 @@ export class SectionFeaturedProjectsComponent {
       top: 0,
       behavior: 'smooth',
     });
-    this.router.navigate(['portfolio']);
+    this.router.navigate(['portfolio/01']);
   }
 }

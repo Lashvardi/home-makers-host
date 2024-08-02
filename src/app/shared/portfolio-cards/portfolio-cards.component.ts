@@ -57,25 +57,25 @@ export class PortfolioCardsComponent implements OnInit {
       title: 'APARTMENT RENOVATION',
       num: '01',
       image:
-        'https://s3-alpha-sig.figma.com/img/a41a/6645/2694b3ef9c24b1fb582109ce031e37b8?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VvKMpSFPwo2cDD113yGptWHDy~~etW1ZLHZdqTVYPjovbCail7rEkXIIeaYQc-FcUsWsRuts6mH~5L34tmTaS8-n17-QAb6Myq32ODqK1~FQwPjXgP8fbgWLmJXRkJZrFgoo2GRcxeWs0GRR9bFyNy3TkhqHJnmnRsH7p9wribcLwm~2uZMXhYYbqdFL4Q6pVnx5IFS7SD7ouvIIEzx7O-MVDgyc~vYRciRZRNdubKCg7DgU0WoCtTRFufV6aFcVeMYRU~sMvCl2nva~TgTvZDTgfKa~-A4a6YyiM~9ktg3zoEEtcA~6wDnb7NBFbiM8hA03FKGNosg3DsMxT5C27g__',
+        'https://s3-alpha-sig.figma.com/img/a41a/6645/2694b3ef9c24b1fb582109ce031e37b8?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lmCYdLLjVcw4G02oOt4Ufc4H2KedjEaEPBE0CFcgMel94f1O6SHYISjWqNsEiSwWUdgJ9UosdixtDEdYu~enWs-bOzGEPjI5vaSDTFQKBxXooCfYRCvkPBmj8UhCq0CNCnUUqXOFQDbN-t45WGuerxw7cN7JiHbzDXeO30b87agPTu4hQrqpgwU4wR3pBTmbd8KCZirdzkuQo9c5X0GiAkLentC0iH1E6lP8KaPk36VUlVzHLDlcedj6I0zF-WRlxucGlQIt8MaVgNHY4Heh6MSvniRUWCskmC2R401Fh6M9uSOdXG~RWuhve0RDnyFiKl50wS4pbeGqgIlwPGn8JQ__',
     },
     {
       title: 'COMMERCIAL RENOVATION',
       num: '02',
       image:
-        'https://s3-alpha-sig.figma.com/img/4736/5e37/b0512ab7befeb19e590a647c81d399ff?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JAGv8gESsou3MI5duAPIct-oPnSmafVG1xRnBOv4xwzj4j3u-rAB-Q3N3meZBKnzs6UlwW~PkMZdqSOejheNv72jYghz0pdsx0RBWDvqtvGmr2DmC9Pk4yFlO-Bjq8konN~6PBLZ72fwmzfN9vwwoAur7Pe5LB4AnUxrI99IlMsUWjSEVQLU19Bd5N0oa-uoH6NeruHnR8ht0-itzJaVOCzhmSK2P90Lud8RW7a3bzspjeLFC3LHZ0EqIIi4U8Jks4k8FmVDch0-3~SWuMpVtcKnOs9Slg4CmxwvQrPorCgmvI1mLfJ2tc75g7DAmntJapdoYff3BT6pdGdUCdrW5Q__',
+        'https://s3-alpha-sig.figma.com/img/4736/5e37/b0512ab7befeb19e590a647c81d399ff?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=klETUlRjyB31mhMLKdyIVBtqhuWNerpCF1ui3MODt43vOLtjvhwfFkEut5NexJmffiT4LV2LrJQFfQ6oyuY13c0IYEJWlZsgvspjHJGXn7lMf5a9I61vWId2iyRCwyfkXgLvaiYXqOt6gn42ZbEjlIPJ0lrEciSjvbzD7~V-Irw4q0cwmF-7djPpd7DrurW4rRf1oz8cIr6ZlULI-1Ka-mfS7vcFU-28RXn9-qvy-O9XDIjziVpYRRZa-70iKA7gi6ke0tvXYlXnsJxzKvCdipuQ5HbpQRGeL78DeBJBnPzsyG2OiET-sA83HpBRgM5~hdXoKwGWn5r8JZqXDj3qnQ__',
     },
     {
       title: 'BATHROOM RENOVATION',
       num: '03',
       image:
-        'https://s3-alpha-sig.figma.com/img/335c/e3b9/577a0f1eb887469394ff66c964e11723?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UrSryY4g303SGg3lfI1uxJG6r3~oUOI44z3CoHYisNAExXkmTxT2n45lfeQWClShruubmpygb5Q940OLBzmDynkYxafvzlrH1auaEcDl-kvG4yqNK6WZf41uzxTidD1TPYaoP9fCn6Jle0kwBQNCo8xZ4IPN1~8xoiq2F37-UbST7nJ6YbOQ6O~MLq3X-vSxBzLcG8Q8YIbmhj2q7jWzpLXYMVAX5pAres~R76Rw1IzTM3tMp46LhURNqXLJ0SSFO0s31VKyUclTFIt~L01fMxeWPKNoFSfEBFahBDpbwGioHcMa4KcBbdUX3sVzwiGOu-qc8IMJhi1swdlDnPnw1A__',
+        'https://s3-alpha-sig.figma.com/img/335c/e3b9/577a0f1eb887469394ff66c964e11723?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ClYcxTEFGuiRe~R5wa0aMKtU9i-E9W368EWyTFriQSdfCij1zqonnXNESZYTklJlH9cJLmW0Ky44wVbttBpI-GZfZqEc~dLTKbljT704b21E3fY9JlH~fUd3eZZTZijoEee31C0E~EeagiYyMnJPCqRnklWwWlr1oeO6JHM26TUye7ysVvj0gr5Zmc6RJXLd9S9H0EFy7s~8T3MEG2m4VWxJmp2XDxUonOG9FUyWNW7wQauWTjy0RDpqEFst7m3qT-Q3sec52L7WRPewqSWN3Mr9rXikn81EF3rKrjUfTkBYsBTDx6AvT5g9xQBCAz0XdBmXwE8gsUfcIQ1xKlAxDg__',
     },
     {
       title: 'KITCHEN RENOVATION',
       num: '04',
       image:
-        'https://s3-alpha-sig.figma.com/img/0e95/5d22/e5961cbb1db2169c024f60d6bc700122?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WxZNdOHFyHReFvU88FigXFZOnVrGD2P20gUL6RqMCaBrFkkqzbDtK93cMyyIgp38y7WFzEGbcmCEQXcrH6yvz4S4e8r6WOJVU3BlWYfJaVcsAQLpQNEkpXRZP2LIMaQJeOAUPW6Pb-nCMDnN3un2Q2-803i3QW05I2HTXLqGmiajQ9zxhXj4WXUlmV-Iuk7naigoeJ6B4RvGl8agdaPL3JGiXWBR79FlwN~DrkT2Ig9aLzrASCV9stNAGo~VCvE0b~e0oy4weoM6FHWQusLjGqO-PjzGLiPVE40bN2BFxFlTGJEe7~6orB5HNxwUuy~H91norWQHGkpYKhlTXuyUXg__',
+        'https://s3-alpha-sig.figma.com/img/0e95/5d22/e5961cbb1db2169c024f60d6bc700122?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jhsZer74NUPtrh7zzTH-wOZKtTkcn8J2eVm6Pu-ZSOMEz1Msv7BP-c9BNSgKThY9Ndxo429FpNfesyWsAYSJtldSHWe0rL-SCeyv5diqcAVBKQXWYzJw3YGqzWpQG7M2a~FYQ5rlJXFZ~BR8cIz5t6NCeWcHzGegrZ7jdvuqGjHep9FDmiPw0j5TkmFNnExZNNZeV-iCuAOxYidhX0BjbxetN7R08-H~ocdeMMTL48K~5-4nmoqss1RgzffbFfjxZ-6QKY4VHe3N838ijxomMG650GMcKQ1pDz5BrdtJSh0mMGjtmuF-98wRrZyA-ovgMD-D8tQdXx90jnf5yI~aAg__',
     },
   ];
 }
